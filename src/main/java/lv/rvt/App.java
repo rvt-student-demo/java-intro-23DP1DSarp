@@ -13,15 +13,24 @@ public class App
         Scanner scanner = new Scanner(System.in);
         
 
-        int speed = Integer.valueOf(scanner.nextLine());
+        int number1 = Integer.valueOf(scanner.nextLine());
+        int number2 = Integer.valueOf(scanner.nextLine());
         
 
-        // Ja ātrums pārsniedz 120, tad izvadām tekstu
+        // Salīdzinām divus ciparus
 
-        if (speed > 120) {
+        if (number1 > number2) {
 
-            System.out.println("Speeding ticket!");
+            System.out.println("Greater number is: " + number1);
 
+
+        } else if (number1 < number2) {
+
+            System.out.println("Greater number is: " + number2);
+
+        } else {
+
+            System.out.println("The numbers are equal!");
 
         }
         
