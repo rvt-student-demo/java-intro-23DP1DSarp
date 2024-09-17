@@ -11,20 +11,26 @@ public class App
         // Izveidojam skaneri vienu reizi un pielietojam visā programmā
         
         Scanner scanner = new Scanner(System.in);
+        
 
-        System.out.println("Ievadiet savu vārdu: ");
+        int speed = Integer.valueOf(scanner.nextLine());
+        
 
-        String firstName = scanner.nextLine();
+        // Ja ātrums pārsniedz 120, tad izvadām tekstu
 
-        System.out.println("Ievadiet savu uzvārdu: ");
+        if (speed > 120) {
 
-        String lastName = scanner.nextLine();
+            System.out.println("Speeding ticket!");
 
-        System.out.println("Ievadiet savu grupu: ");
 
-        String group = scanner.nextLine();
+        }
+        
+        
 
-        System.out.println("Sveiki, " + firstName + " " + lastName + " " + group + ". Prieks jūs redzēt!");
+
+
+        
+
     }
 
 }
