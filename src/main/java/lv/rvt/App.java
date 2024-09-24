@@ -14,13 +14,14 @@ public class App
         
         Integer number = Integer.valueOf(scanner.nextLine());
 
-       
+        int numberSum = 0;
 
-        for (int i = number; i <= 100; i++) {
+        for (int i = 0; i <= number; i++) {
             System.out.println(i);
+            numberSum += i;
         }  
 
-
+        System.out.println("The sum is: " + numberSum);
        }
             
 
