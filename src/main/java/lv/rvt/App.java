@@ -13,44 +13,39 @@ public class App
         Scanner scanner = new Scanner(System.in);
         
 
-        int points = Integer.valueOf(scanner.nextLine());
+        // Jautājam par dāvanas cenu
+
+        System.out.println("Value of the gift?");
+
+        double giftValue = Double.valueOf(scanner.nextLine());
         
         
 
         // Salīdzinām divus ciparus
 
-        if (points < 0) {
+        if (giftValue >= 5000 && giftValue < 25000 ) {
 
-            System.out.println("impossible!");
+            System.out.println((100+(giftValue - 5000) * 0.08));
 
+        } else if (giftValue >= 25000 && giftValue < 55000) {
 
-        } else if (points >= 0 && points <= 49) {
+            System.out.println((1700+(giftValue - 25000) * 0.10));
 
-            System.out.println("failed");
+        } else if (giftValue >= 55000 && giftValue < 200000) {
 
-        } else if (points >= 50 && points <= 59) {
+            System.out.println((4700+(giftValue - 55000) * 0.12));
 
-            System.out.println("1");
+        } else if (giftValue >= 200000 && giftValue < 1000000) {
 
-        } else if (points >= 60 && points <= 69) {
+            System.out.println((22100+(giftValue - 200000) * 0.15));
 
-            System.out.println("2");
+        }  else if (giftValue >= 1000000 ) {
 
-        }  else if (points >= 70 && points <= 79) {
+            System.out.println((142100+(giftValue - 1000000) * 0.17));
 
-            System.out.println("3");
+        }   else {
 
-        }   else if (points >= 80 && points <= 89) {
-
-            System.out.println("4");
-
-        }   else if (points >= 90 && points <= 100) {
-
-            System.out.println("5");
-
-        } else {
-
-            System.out.println("incredible!");
+            System.out.println("No tax!");
 
         }
         
