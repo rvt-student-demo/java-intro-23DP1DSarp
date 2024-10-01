@@ -12,18 +12,18 @@ public class App
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("How many times?");
+    
 
-        Integer times = Integer.valueOf(scanner.nextLine());
-
-        for (int i=0; i < times; i++){
-            printText();
-        }
+        division(2, 10);
         
        }
 
-       public static void printText() {
-        System.out.println("In a hole in the ground there lived a method");
+       public static void division(int intFirst, int intSecond) {
+        for (int i=intFirst; i < intSecond + 1; i++){
+            if (i % 3 == 0) {
+                System.out.println(i);
+            }
+        }
        }
             
 
