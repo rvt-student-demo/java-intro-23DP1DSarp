@@ -12,18 +12,48 @@ public class App
         
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Last number?");
+        System.out.println("Give numbers:");
         
-        Integer number = Integer.valueOf(scanner.nextLine());
 
         int numberSum = 0;
+        int numberCount = 0;
+        double numberAverage = 0;
+        int numberEven = 0;
+        int numberOdd = 0;
+        
 
-        for (int i = 0; i <= number; i++) {
+        while (true) {
             
-            numberSum += i;
-        }  
+            Integer number = Integer.valueOf(scanner.nextLine());
+            
+            if (number < 0) {
+                System.out.println("Thx! Bye!");
+                break;
+            }
 
-        System.out.println("The sum is: " + numberSum);
+
+
+            numberSum = numberSum + number;
+            numberCount++;
+            numberAverage = numberSum / numberCount;
+            
+            if (number % 2 == 0) {
+                numberEven++;
+            } else {
+                numberOdd++;
+            }
+
+
+        }
+
+        System.out.println("Sum: " + numberSum);
+        System.out.println("Numbers: " + numberCount);
+        System.out.println("Average: " + numberAverage);
+        System.out.println("Even: " + numberEven);
+        System.out.println("Odd: " + numberOdd);
+
+
+
        }
             
 
