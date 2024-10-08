@@ -10,97 +10,104 @@ public class App
     {
 
 
-        printStars(5);
-        printStars(3);
-        printStars(9);
-
-        System.out.println("");
-
-        printSquare(4);
-
-        System.out.println("");
-
-        printRectangle(17, 3);
-
-        System.out.println("");
-
         printTriangle(4);
 
+        System.out.println("");
+
+        christmasTree(4);
+        christmasTree(10);
         
         
        }
 
-       public static void printStars(int intNumber) {
-
-            int startNumber = 1;
-
-            while(startNumber <= intNumber){
-                System.out.print("*");
-                startNumber++;
-            }
-            System.out.println("");
-        }
-
-        public static void printSquare(int intSize) {
-
-            int startLineNumber = 1;
-            int startRowNumber = 1;
-
-            while(startRowNumber <= intSize){
-                while(startLineNumber <= intSize){
-                    System.out.print("*");
-                    startLineNumber++;
-                }
-               System.out.println("");
-               startRowNumber++;
-               startLineNumber = 1;
-            }
-
-        }
-
-        public static void printRectangle(int width, int height) {
-
-            int startLineNumber = 1;
-            int startRowNumber = 1;
-
-            while(startRowNumber <= height){
-                while(startLineNumber <= width){
-                    System.out.print("*");
-                    startLineNumber++;
-                }
-               System.out.println("");
-               startRowNumber++;
-               startLineNumber = 1;
-            }    
-            
-        }
+       
 
         public static void printTriangle(int size) {
 
             int startLineNumber = 1;
             int startRowNumber = 1;
+            int starCount = 1;
+            int counter = 1;
+            
 
             
-                while(startRowNumber <= size){
-                    while(startLineNumber <= startRowNumber){
-                    System.out.print("*");
+               
+                    while(startRowNumber <= size){
+                    
+            
+                    while(startLineNumber <= size+2){
+                    System.out.print(" ");
+                    size--;
                     startLineNumber++;
                     }
+                    while (starCount <= counter) {
+                        System.out.print("*");
+                        starCount++;
+                    }
 
-                System.out.println("");
-                startLineNumber = 1;
-                startRowNumber++;
+                    counter++;
+                    starCount = 1;
+                    size = 4;
+                    System.out.println("");
+                    startRowNumber++;
 
                 }
-              
+            
             
         }
 
+        public static void christmasTree(int height) {
+
+            int startLineNumber = 1;
+            int startRowNumber = 1;
+            int starCount = 1;
+            int counter = 1;
+            
+            for(int i = 0; i < height + 3; i++ ){
+                printSpaces(startLineNumber, height);
+
+                printStars(startLineNumber, height, counter);
+
+                System.out.println("");
+                counter = counter + 2;
+                height--;
+            }
+            
+            for (int i = 0; i <= height + 1; i++) {
+                for (int a = 0; a <= height + 1; a++) {
+                System.out.print(" ");
+                
+                }
+
+
+                for (int j = 0; j <= height; j++) {
+                System.out.println("ooo");
+                
+                }
+
+            }
+            
+            
+            
+        }
+
+            public static void printSpaces(int startLineNumber, int height){
+                for (int i = 0; i <= height - 2; i++) {
+                    System.out.print(" ");
+                    
+                    
+                }
+            }
+
+            public static void printStars(int startLineNumber, int height, int counter){
+                for (int i = 0; i <= counter - 1; i++) {
+                    System.out.print("*");
+                }
 
         
-}
-            
 
+        }
 
+    }
 
 
