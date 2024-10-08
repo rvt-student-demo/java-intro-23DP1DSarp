@@ -58,48 +58,41 @@ public class App
 
         public static void christmasTree(int height) {
 
-            int startLineNumber = 1;
-            int startRowNumber = 1;
-            int starCount = 1;
+            int spacesNumber = 1;
             int counter = 1;
             
-            for(int i = 0; i < height + 3; i++ ){
-                printSpaces(startLineNumber, height);
+            for(int i = 0; i < height; i++ ){
+                printSpaces(spacesNumber, height);
 
-                printStars(startLineNumber, height, counter);
+                printStars(spacesNumber, height, counter);
 
                 System.out.println("");
                 counter = counter + 2;
-                height--;
+                spacesNumber--;
             }
             
-            for (int i = 0; i <= height + 1; i++) {
-                for (int a = 0; a <= height + 1; a++) {
+        
+            for (int i = 0; i < 2; i++) {
+                for (int a = 0; a <= height - 2; a++) {
                 System.out.print(" ");
                 
                 }
-
-
-                for (int j = 0; j <= height; j++) {
-                System.out.println("ooo");
                 
-                }
-
+                System.out.println("***");
+            
             }
             
             
             
         }
 
-            public static void printSpaces(int startLineNumber, int height){
-                for (int i = 0; i <= height - 2; i++) {
+            public static void printSpaces(int spacesNumber, int height){
+                for (int i = 0; i <= spacesNumber + height - 2; i++) {
                     System.out.print(" ");
-                    
-                    
                 }
             }
 
-            public static void printStars(int startLineNumber, int height, int counter){
+            public static void printStars(int spacesNumber, int height, int counter){
                 for (int i = 0; i <= counter - 1; i++) {
                     System.out.print("*");
                 }
