@@ -17,9 +17,9 @@ public class App
         String name = scanner.nextLine();
 
 
-        while (name != "") {
-            name = scanner.nextLine();
+        while (name != ""){
             wordList.add(name);
+            name = scanner.nextLine();
         }
        
         System.out.println(wordList.get(2));
