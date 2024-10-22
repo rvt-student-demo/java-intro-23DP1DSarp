@@ -2,7 +2,6 @@ package lv.rvt;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.util.Scanner;
 import java.util.*;
 
 public class App 
@@ -10,36 +9,35 @@ public class App
     public static void main( String[] args )
     {
 
-        Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(3);
+        numbers.add(2);
+        numbers.add(6);
+        numbers.add(-1);
+        numbers.add(5);
+        numbers.add(1);
 
-        ArrayList<Integer> integerList = new ArrayList<>();
+        System.out.println("The numbers in the range [0, 5]");
+        printNumbersInRange(numbers, 0, 5);
 
-       int number = Integer.valueOf(scanner.nextLine());
+        System.out.println("The numbers in the range [3, 10]");
+        printNumbersInRange(numbers, 3, 10);
 
-
-        while (number != -1){
-            integerList.add(number);
-            number = Integer.valueOf(scanner.nextLine());
-        }
-
-        System.out.println("From where? ");
-
-        int startNum = Integer.valueOf(scanner.nextLine());
-
-        System.out.println("To where? ");
-
-        int endNum = Integer.valueOf(scanner.nextLine());
-
-        while (startNum < endNum + 1){
-            int indexNum = integerList.get(startNum);
-            System.out.println(indexNum);
-            startNum = startNum + 1;
         }
        
-        
+        public static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit) {
+
+            for (Integer value: numbers) {
+                if (numbers.get(lowerLimit) >= lowerLimit && numbers.get(lowerLimit) <= upperLimit){
+                    System.out.println(numbers);
+                }
+                
+            }
+
+        }
         
        }
 
        
 
-}
+
