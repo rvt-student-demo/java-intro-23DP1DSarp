@@ -12,17 +12,31 @@ public class App
 
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<String> wordList = new ArrayList<>();
+        ArrayList<Integer> integerList = new ArrayList<>();
 
-        String name = scanner.nextLine();
+       int number = Integer.valueOf(scanner.nextLine());
 
 
-        while (name != ""){
-            wordList.add(name);
-            name = scanner.nextLine();
+        while (number != -1){
+            integerList.add(number);
+            number = Integer.valueOf(scanner.nextLine());
+        }
+
+        System.out.println("From where? ");
+
+        int startNum = Integer.valueOf(scanner.nextLine());
+
+        System.out.println("To where? ");
+
+        int endNum = Integer.valueOf(scanner.nextLine());
+
+        while (startNum < endNum + 1){
+            int indexNum = integerList.get(startNum);
+            System.out.println(indexNum);
+            startNum = startNum + 1;
         }
        
-        System.out.println(wordList.get(2));
+        
         
        }
 
