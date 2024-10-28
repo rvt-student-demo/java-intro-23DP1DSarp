@@ -9,35 +9,55 @@ public class App
     public static void main( String[] args )
     {
 
-        ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(3);
-        numbers.add(2);
-        numbers.add(6);
-        numbers.add(-1);
-        numbers.add(5);
-        numbers.add(1);
+        Scanner reader = new Scanner(System.in);
+        int sum = 0;
+        int count = 0;
+        int longestWord = 0;
 
-        System.out.println("The numbers in the range [0, 5]");
-        printNumbersInRange(numbers, 0, 5);
+        String word = "";
 
-        System.out.println("The numbers in the range [3, 10]");
-        printNumbersInRange(numbers, 3, 10);
+        
+        
+        
 
-        }
-       
-        public static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit) {
+        while (true) {
 
-            for (Integer value: numbers) {
-                if (numbers.get(lowerLimit) >= lowerLimit && numbers.get(lowerLimit) <= upperLimit){
-                    System.out.println(numbers);
+            String input = reader.nextLine();
+            if (input.equals("")) {
+                break;
+            }
+        
+            String[] parts = input.split(",");
+            sum = sum + Integer.valueOf(parts[1]);
+            count = count + 1;
+
+            for (int i = 0; i < parts.length; i++) {
+                        
+                String length = String.valueOf(parts[i]);
+                int wordLength = length.length();
+
+                if (wordLength > longestWord){
+                    longestWord = wordLength;
+                    word = parts[i];
                 }
-                
+
             }
 
         }
-        
-       }
 
-       
+        
+        System.out.println("Longest name:" + word);
+
+
+        if (count > 0) {
+            System.out.println("Age average: " + (1.0 * sum / count));
+        } else {
+            System.out.println("No input.");
+        }
+            
+        
+    }
+
+}    
 
 
