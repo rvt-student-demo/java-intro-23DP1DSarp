@@ -19,7 +19,7 @@ public class Product {
 
 
     public static void main(String[] args) {
-        Product myObj = new Product("Banana", 1.1, 13);
+        new Product("Banana", 1.1, 13);
     }
 
     public void printProduct() {
