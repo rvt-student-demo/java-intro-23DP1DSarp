@@ -24,5 +24,18 @@ public class Person {
         System.out.println(this.name + ", age " + this.age + " years");
     }
 
+    // Getter method
+
+    public String getGroup() {
+        return this.
+        group;
+    }
+
+
+    // Setter method
+
+    public String setGroup() {
+        this.group = group;
+    }
 
 }
