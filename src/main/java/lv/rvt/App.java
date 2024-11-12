@@ -6,17 +6,14 @@ import java.util.*;
 
 public class App 
 {
-    public static void main( String[] args )
-    {
+    public static void main(String[] args) throws Exception{
+        BufferedReader reader = Utils.getReader("data.csv");
+        String line;
 
-        Agent bond = new Agent("James", "Bond");
 
-        bond.toString(); // prints nothing
-        System.out.println(bond);
-
-        Agent ionic = new Agent("Ionic", "Bond");
-        System.out.println(ionic);
-        
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
+        }
     }
 
 }    
