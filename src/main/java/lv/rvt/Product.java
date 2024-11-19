@@ -26,8 +26,8 @@ public class Product {
     }
    
     
-    public String printProduct() {
-        return this.name + "(" + this.weight + "kg" + ")" + "can be found from the" + this.location;
+    public String toString() {
+        return this.name + " (" + this.weight + "kg" + ")" + " can be found from the " + this.location;
     }
 
 
