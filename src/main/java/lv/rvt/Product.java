@@ -3,27 +3,31 @@ package lv.rvt;
 public class Product {
     
     private String name;
-    private double price;
-    private int quantity;
+    private String location;
+    private int weight;
+    
 
+    
 
-    public Product(String initialName, double initialPrice, int initialQuantity) {
-        this.name = initialName;
-        this.price = initialPrice;
-        this.quantity = initialQuantity;
-
-        printProduct();
-        
-        
+    public Product(String name){
+        this(name, 1);
     }
 
-
-    public static void main(String[] args) {
-        new Product("Banana", 1.1, 13);
+    public Product(String name, String location){
+        this.name = name;
+        this.location = location;
+        this.weight = 1;
     }
 
-    public void printProduct() {
-        System.out.println(this.name + ", price " + this.price + ", " + this.quantity + " pcs" );
+    public Product(String name, int weight){
+        this.name = name;
+        this.weight = weight;
+        this.location = "shelf";
+    }
+   
+    
+    public String printProduct() {
+        return this.name + "(" + this.weight + "kg" + ")" + "can be found from the" + this.location;
     }
 
 
