@@ -6,58 +6,29 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class App 
-{/* 
+{
+   // Comma separeted values
+
+   // Izlasīt persons.csv izmantojot BufferedReader objektu
     public static void main(String[] args) throws Exception {
+        BufferedReader reader = Helper.getReader("persons.csv");
 
-        BufferedReader reader = Utils.getReader("persons.csv");
+        
+        
 
-        //Scanner scanner = new Scanner(System.in);
-    
-        ArrayList<Person> persons = new ArrayList<>();
-     
         String line;
-        
-       
-        
-        try (Scanner scanner = new Scanner(Paths.get("persons.csv"))) {
-            while (scanner.hasNextLine()) {
-                line = scanner.nextLine();
-        
-                String[] parts = line.split(",");
-                String name = parts[0];
-                int age = Integer.valueOf(parts[1]);
-                int weight = Integer.valueOf(parts[2]);
-                int height = Integer.valueOf(parts[3]);
-        
-                persons.add(new Person(name, age));
-            }
-        
+
+        reader.readLine(); // Title row - Mēs ignorējam 1 rindu
+
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
         }
-
-        for (Person name: persons) {
-           // System.out.println(name, age, weight, height);
-        }
-
-        String[] parts = {"name", "age", "weight", "height"};
-     
-        Person pers1 = new Person(parts[0],parts[1],parts[2],parts[3]);
-        persons.add(pers1);
-     
-        
-     
-
-     
-        reader.close();
-       }
-    
-    
-    */
+    }
+   
 }
 
 
-        // Neprintēt kolonnu virsrakstus
-        // Output: Id: <Id>; username; <usrnm>; passsword; <pwd>
-        // println() print()
+        
 
 
 
