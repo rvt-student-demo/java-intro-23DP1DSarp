@@ -6,16 +6,18 @@ public class MainProgram {
 
     public static void main(String[] args) {
         
+/* 
+        Counter counter = new Counter(100);
 
-        Product tapeMeasure = new Product("Tape measure");
-        Product plaster = new Product("Plaster", "home improvement section");
-        Product tyre = new Product("Tyre", 5);
+        counter.value();
+
         
-        System.out.println(tapeMeasure);
-        System.out.println(plaster);
-        System.out.println(tyre);
+        counter.value();
 
+        counter.decrease();
+        counter.value();
 
+*/
     }
 
 }

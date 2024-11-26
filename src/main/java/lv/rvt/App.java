@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class App 
-{
+{/* 
     public static void main(String[] args) throws Exception {
 
         BufferedReader reader = Utils.getReader("persons.csv");
@@ -35,7 +35,7 @@ public class App
         }
 
         for (Person name: persons) {
-            System.out.println(name, age, weight, height);
+           // System.out.println(name, age, weight, height);
         }
 
         String[] parts = {"name", "age", "weight", "height"};
@@ -51,7 +51,7 @@ public class App
        }
     
     
-    
+    */
 }
 
 
