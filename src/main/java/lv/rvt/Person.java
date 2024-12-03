@@ -25,6 +25,10 @@ public class Person {
         return 206.3 - (0.711 * this.age);
     }
 
+    public String toCsvRow(){
+        return this.name + ", " + this.age + ", " + this.weight + ", " + this.height;
+    }
+
     public String toString() {
         return this.name + ", BMI: " + this.bodyMassIndex()
             + ", maximum heart rate: " + this.maximumHeartRate();
