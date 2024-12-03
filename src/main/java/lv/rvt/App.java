@@ -18,14 +18,13 @@ public class App
 
             Scanner scanner = new Scanner(System.in);
 
-
+            System.out.println("Hello, choose your command: ");
+            System.out.println("show - shows all persons");
+            System.out.println("add - add a person");
+            System.out.println("exit - add a person");
             
 
             while (true) {
-                System.out.println("Hello, choose your command: ");
-                System.out.println("show - shows all persons");
-                System.out.println("add - add a person");
-                System.out.println("exit - add a person");
 
                 String command = scanner.nextLine();
             
@@ -51,6 +50,12 @@ public class App
             }
             else if (command.equals("exit")) {
                 break;
+            } 
+            else if (command.equals("help")){
+                System.out.println("Hello, choose your command: ");
+                System.out.println("show - shows all persons");
+                System.out.println("add - add a person");
+                System.out.println("exit - add a person");
             }
             
 
