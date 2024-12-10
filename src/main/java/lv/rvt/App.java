@@ -18,6 +18,10 @@ public class App
 
             Scanner scanner = new Scanner(System.in);
 
+            boolean isProgramRunning = true;
+
+            System.out.println("Welcome to person manager, type \"help\" to see avaliable commands");
+
             System.out.println("Hello, choose your command: ");
             System.out.println("show - shows all persons");
             System.out.println("add - add a person");
@@ -36,7 +40,7 @@ public class App
                 ArrayList<Person> persons = PersonManager.getPersonList();
                 System.out.println("Person list: ");
                 for(Person person : persons){
-                    System.out.println(person);
+                    System.out.printf("| %s |  | %s | | %s | | %s |\n", person.getName(), person.getAge(), person.getWeight(), person.getHeight());
                 }
             }
             else if (command.equals("add")) {

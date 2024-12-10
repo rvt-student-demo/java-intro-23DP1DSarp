@@ -17,12 +17,24 @@ public class Person {
         this.height = height;
     }
 
-    public String name(String name) {
-        return this.name;
+    public String getName() {
+        return name;
     }
 
-    public int age() {
-        return age; 
+    public int getAge() {
+        return age;
+    }
+
+    public double bodyMassIndex() {
+        return this.weight / (this.height * this.height);
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public double getHeight() {
+        return height;
     }
 
     public String toCsvRow(){
@@ -31,6 +43,6 @@ public class Person {
 
     public String toString() {
         return this.name + " " + this.age + " "
-            + this.weight + " " + this.height;
+            + this.weight + " " + this.height + bodyMassIndex();
     }
 }
