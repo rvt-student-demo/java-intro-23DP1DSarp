@@ -26,6 +26,9 @@ public class App
 
             while (true) {
 
+                
+                
+
                 String command = scanner.nextLine();
             
 
@@ -47,18 +50,21 @@ public class App
                 int height = Integer.valueOf(scanner.nextLine());
 
                 Person person = new Person (name, age, weight, height);
+                PersonManager.addPerson(person);
+
             }
             else if (command.equals("exit")) {
                 break;
             } 
             else if (command.equals("help")){
-                System.out.println("Hello, choose your command: ");
+                System.out.println(" ");
                 System.out.println("show - shows all persons");
                 System.out.println("add - add a person");
+                System.out.println("help - shows all avaliable commands");
                 System.out.println("exit - add a person");
             }
             
-
+            System.out.println(" ");
         }
             
             

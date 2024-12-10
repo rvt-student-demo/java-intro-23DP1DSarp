@@ -17,12 +17,12 @@ public class Person {
         this.height = height;
     }
 
-    public double bodyMassIndex() {
-        return this.weight / (this.height * this.height);
+    public String name(String name) {
+        return this.name;
     }
 
-    public double maximumHeartRate() {
-        return 206.3 - (0.711 * this.age);
+    public int age() {
+        return age; 
     }
 
     public String toCsvRow(){
@@ -30,7 +30,7 @@ public class Person {
     }
 
     public String toString() {
-        return this.name + ", BMI: " + this.bodyMassIndex()
-            + ", maximum heart rate: " + this.maximumHeartRate();
+        return this.name + " " + this.age + " "
+            + this.weight + " " + this.height;
     }
 }

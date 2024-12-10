@@ -24,24 +24,23 @@ public class PersonManager {
 
         reader.readLine();
 
-        Person person1 = new Person("Maija", 36, 46.0, 176.5);
+        
 
 
       while ((line = reader.readLine()) != null) {
         
-
         String [] parts = line.split(", ");
 
-        System.out.println(parts[0] + " " + parts[1] + " " + parts[2] + " " + parts[3]);
+        Person person1 = new Person(parts[0],  Integer.valueOf(parts[1]),  Double.valueOf(parts[2]), Double.valueOf(parts[3]));
 
-        
+        persons.add(person1);
         
       }
 
 
       
 
-      persons.add(person1);
+      
 
       return persons;
 
