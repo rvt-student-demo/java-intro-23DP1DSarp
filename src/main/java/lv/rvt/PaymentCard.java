@@ -2,6 +2,7 @@ package lv.rvt;
 
 public class PaymentCard {
     private double balance;
+    private double payment;
     
 
     public PaymentCard(double openingBalance) {
@@ -24,6 +25,16 @@ public class PaymentCard {
             this.balance = this.balance - 4.60;
         }
         
+    }
+
+    public double balance() {
+        return this.balance;
+    }
+
+    public boolean takeMoney(double amount){
+        if () {
+            
+        }
     }
 
     public void addMoney(double amount) {
