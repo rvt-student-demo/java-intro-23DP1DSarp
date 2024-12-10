@@ -31,9 +31,9 @@ public class PersonManager {
         
         String [] parts = line.split(", ");
 
-        Person person1 = new Person(parts[0],  Integer.valueOf(parts[1]),  Double.valueOf(parts[2]), Double.valueOf(parts[3]));
+        //Person person1 = new Person(parts[0],  Integer.valueOf(parts[1]),  Double.valueOf(parts[2]), Double.valueOf(parts[3]));
 
-        persons.add(person1);
+        //persons.add(person1);
         
       }
 

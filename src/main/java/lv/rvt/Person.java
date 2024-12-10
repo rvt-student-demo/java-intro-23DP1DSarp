@@ -7,10 +7,10 @@ public class Person {
 
     private String name;
     private int age;
-    private double weight;
+    private int weight;
     private double height;
 
-    public Person(String name, int age, double weight, double height) {
+    public Person(String name, int age, double height, int weight) {
         this.name = name;
         this.age = age;
         this.weight = weight;
@@ -29,13 +29,31 @@ public class Person {
         return this.weight / (this.height * this.height);
     }
 
-    public double getWeight() {
-        return weight;
+    public int getWeight() {
+
+            return weight;
+
     }
+
+        
+    public void setWeight(int newWeight) {
+
+       this.weight = newWeight;
+
+    }  
+    
 
     public double getHeight() {
         return height;
     }
+
+
+    
+
+
+    
+
+    
 
     public String toCsvRow(){
         return this.name + ", " + this.age + ", " + this.weight + ", " + this.height;
