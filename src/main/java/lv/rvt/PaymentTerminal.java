@@ -12,6 +12,7 @@ public class PaymentTerminal {
     public boolean eatAffordably(PaymentCard card) {
         if (card.balance >= 2.50) {
             card.balance = card.balance - 2.50;
+            affordableMeals = affordableMeals + 1;
             return true;
         }
             return false;
@@ -21,6 +22,8 @@ public class PaymentTerminal {
     public double eatAffordably(double change) {
         if (change >= 2.50) {
             
+            money = money + 2.50;
+            affordableMeals = affordableMeals + 1;
             return change = change - 2.50;
         }
             return change;
@@ -31,9 +34,21 @@ public class PaymentTerminal {
     public boolean eatHeartily(PaymentCard card) {
         if (card.balance >= 4.30) {
             card.balance = card.balance - 4.30;
+            heartyMeals = heartyMeals + 1;
             return true;
         }
             return false;
+    }
+
+    public double eatHeartily(double change) {
+        if (change >= 2.50) {
+            
+            money = money + 2.50;
+            heartyMeals = heartyMeals + 1;
+            return change = change - 2.50;
+        }
+            return change;
+        
     }
 
     public void addMoneyToCard(PaymentCard card, double sum) {
