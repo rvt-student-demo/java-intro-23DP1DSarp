@@ -12,12 +12,13 @@ public class Apartment {
     }
 
     public boolean largerThan(Apartment compared){
-        if () {
-            
+        if (this.rooms > compared.rooms && this.squares > compared.squares ) {
+            return true;
         }
+            return false;
     }
 
-    public int priceDifference(Apartment compared){
+   /*  public int priceDifference(Apartment compared){
 
         // Math.abs() would be needed
     
@@ -25,5 +26,5 @@ public class Apartment {
 
     public boolean moreExpensiveThan(Apartment compared){
 
-    }
+    }*/
 }
