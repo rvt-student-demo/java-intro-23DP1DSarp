@@ -1,5 +1,5 @@
 package lv.rvt;
-
+ /*
 public class HealthStation {
 
     
@@ -37,3 +37,4 @@ public class HealthStation {
 
     }
 }
+*/

@@ -5,7 +5,7 @@ import java.io.BufferedWriter;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.*;
-
+/* 
 public class PersonManager {
     public static ArrayList<Person> getPersonList() throws Exception{
 
@@ -62,3 +62,4 @@ public class PersonManager {
     
 }
 
+*/

@@ -15,17 +15,21 @@ public class App
         
            
         
-            public static void main(String[] args) {
-                Person muhammad = new Person("Muhammad ibn Musa al-Khwarizmi", 1, 1, 780);
-                Person pascal = new Person("Blaise Pascal", 19, 6, 1623);
-            }
+            public static void main(String[] args) throws Exception{
+                
+                Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
+                Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
+                Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
+
+                System.out.println(manhattanStudioApt.largerThan(atlantaTwoBedroomApt));       // false
+                System.out.println(bangorThreeBedroomApt.largerThan(atlantaTwoBedroomApt));  // true
 
             
 
         }
     
     
-
+    }
 
 
 

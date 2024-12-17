@@ -5,41 +5,28 @@ import java.util.Scanner;
 
 public class Person {
 
-
-        private String name;
-        private SimpleDate birthday;
-        private int height;
-        private int weight;
-    
-        // ...
+    private String name;
+    private SimpleDate birthday;
+    private int weight = 0;
+    private int length = 0;
     
   
     
 
-
-    
-
-
-    public int ageAsYears(){
-        
-
-        if (muhammad.ageAsYears() > pascal.ageAsYears()) {
-            System.out.println(muhammad.getName() + " is older than " + pascal.getName());
-        }
+    public Person(String name, SimpleDate date) {
+        this.name = name;
+        this.birthday = date;
     }
 
-    boolean olderThan(Person compared){
-        
-
-        if (muhammad.olderThan(pascal)) {  //  same as muhammad.olderThan(pascal)==true
-            System.out.println(muhammad.getName() + " is older than " + pascal.getName());
-        } else {
-            System.out.println(muhammad.getName() + " is not older than " + pascal.getName());
-        }
+    public Person(String name, int day, int month, int year) {
+        this.name = name;
+        this.birthday = new SimpleDate(day, month, year);
     }
 
     public String toString() {
-        return this.name + " " + this.age + " "
-            + this.weight + " " + this.height + bodyMassIndex();
+        return this.name + ", born on " + this.birthday;
     }
+    
+
+
 }
