@@ -53,6 +53,7 @@ public class PaymentTerminal {
 
     public void addMoneyToCard(PaymentCard card, double sum) {
         card.balance = card.balance + sum;
+        money = money + sum;
     }
 
     public String toString() {
