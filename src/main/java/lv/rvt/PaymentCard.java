@@ -13,18 +13,30 @@ public class PaymentCard {
         return "The card has a balance of " + this.balance + " euros";
     }
 
-    public void eatAffordably(PaymentCard card) {
+    public boolean eatAffordably(PaymentCard card) {
         if (card.balance >= 2.60) {
             card.balance = card.balance - 2.60;
+            return true;
         }
+        return false;
         
     }
 
-    public void eatHeartily(PaymentCard card) {
-        if (card.balance >= 4.60) {
-            card.balance = card.balance - 4.60;
+    public boolean eatAffordably(int change) {
+        if (payment >= 2.60) {
+            
+            return true;
         }
+        return false;
         
+    }
+
+    public boolean eatHeartily(PaymentCard card) {
+        if (card.balance >= 4.60) {
+
+            return true;
+        }
+            return false;
     }
 
     public double balance() {
