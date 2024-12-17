@@ -29,11 +29,20 @@ public class Apartment {
         
         }
 
-        return price;
+            return price;
     
     }
 
-   /*  public boolean moreExpensiveThan(Apartment compared){
+    public boolean moreExpensiveThan(Apartment compared){
 
-    }*/
+        if ((this.squares * this.pricePerSquare) > (compared.squares * compared.pricePerSquare)) {
+            return true;
+        }
+            return false;
+
+
+    }
+
 }
+
+
