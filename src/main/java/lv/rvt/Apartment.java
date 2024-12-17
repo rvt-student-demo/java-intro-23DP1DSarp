@@ -4,6 +4,7 @@ public class Apartment {
     private int rooms;
     private int squares;
     private int pricePerSquare;
+    private int price;
 
     public Apartment(int rooms, int squares, int pricePerSquare) {
         this.rooms = rooms;
@@ -18,13 +19,21 @@ public class Apartment {
             return false;
     }
 
-   /*  public int priceDifference(Apartment compared){
+    public int priceDifference(Apartment compared){
 
-        // Math.abs() would be needed
-    
+        price = (this.squares * this.pricePerSquare) - (compared.squares * compared.pricePerSquare);
+
+        if (price < 0) {
+
+            return Math.abs(price);
+        
         }
 
-    public boolean moreExpensiveThan(Apartment compared){
+        return price;
+    
+    }
+
+   /*  public boolean moreExpensiveThan(Apartment compared){
 
     }*/
 }
