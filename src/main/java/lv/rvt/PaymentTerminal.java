@@ -6,21 +6,40 @@ public class PaymentTerminal {
     private int heartyMeals;  // number of sold hearty meals
 
     public PaymentTerminal() {
-        // register initially has 1000 euros of money
+        this.money = 1000;
     }
 
-    public void eatAffordably() {
-        if (this.balance >= 2.60) {
-            this.balance = this.balance - 2.60;
+    public double eatAffordably(double payment) {
+
+        if (payment >= 2.50) { 
+
+            money = money + 2.50;
+            affordableMeals = affordableMeals + 1;
+            return payment = payment - 2.50;
+               
         }
+            
+        return payment;
+         
         
     }
 
-    public void eatHeartily() {
-        if (this.balance >= 4.60) {
-            this.balance = this.balance - 4.60;
+    public double eatHeartily(PaymentCard card) {
+
+        if (card.balance >= 4.30) { 
+
+         money = money + 4.30;
+         heartyMeals = heartyMeals + 1;
+         return card.balance = card.balance - 4.30;
+               
         }
-        
+            
+        return card.balance;
+         
+    }
+
+    public void addMoneyToCard(PaymentCard card, double sum) {
+        card.balance = card.balance + sum;
     }
 
     public String toString() {

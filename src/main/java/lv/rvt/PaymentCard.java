@@ -1,7 +1,7 @@
 package lv.rvt;
 
 public class PaymentCard {
-    private double balance;
+    public double balance;
     private double payment;
     
 
@@ -13,16 +13,16 @@ public class PaymentCard {
         return "The card has a balance of " + this.balance + " euros";
     }
 
-    public void eatAffordably() {
-        if (this.balance >= 2.60) {
-            this.balance = this.balance - 2.60;
+    public void eatAffordably(PaymentCard card) {
+        if (card.balance >= 2.60) {
+            card.balance = card.balance - 2.60;
         }
         
     }
 
-    public void eatHeartily() {
-        if (this.balance >= 4.60) {
-            this.balance = this.balance - 4.60;
+    public void eatHeartily(PaymentCard card) {
+        if (card.balance >= 4.60) {
+            card.balance = card.balance - 4.60;
         }
         
     }
@@ -31,11 +31,25 @@ public class PaymentCard {
         return this.balance;
     }
 
-    public boolean takeMoney(double amount){
-        if () {
-            
+    public boolean takeMoney(PaymentCard card, double amount){
+        if (card.balance >= amount) { 
+            moneyTake(amount);  
+            return true;   
         }
+            return false;
+        
+
     }
+
+    
+
+    public void moneyTake(double amount){
+        
+        this.balance = this.balance - amount;
+    }
+
+
+    
 
     public void addMoney(double amount) {
 
