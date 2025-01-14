@@ -1,6 +1,6 @@
 package lv.rvt;
 
-public class Box {
+class Box {
 
     private double width;
     private double height;
@@ -14,10 +14,13 @@ public class Box {
     }
 
     public Box( Box oldBox ){
-        this.width = width;
-        this.height = height;
-        this.length = length;
+        this.width = oldBox.width();
+        this.height = oldBox.height();
+        this.length = oldBox.length();
     }
+
+   
+
 
     public double width(){
         return width;
@@ -40,7 +43,7 @@ public class Box {
         return 2 * faceArea() + 2 * topArea() + 2 * sideArea() ;      
     }
 
-    public double faceArea(){
+    private double faceArea(){
         return length * height;
     }
 
@@ -48,12 +51,37 @@ public class Box {
         return length * width;
     }
 
-    public double sideArea(){
+    private double sideArea(){
         return width * height;
     }
-
+    
     public Box biggerBox( Box oldBox ){
 
-    return new Box( 1.25*oldBox.width(),  1.25*oldBox.height(), 1.25*oldBox.length() );
+        return new Box( 1.25*oldBox.width(),  1.25*oldBox.height(), 1.25*oldBox.length() );
+        
+        
+    }
+    
+    public Box smallerBox( Box oldBox ){
+
+        return new Box( oldBox.width()/1.25,  oldBox.height()/1.25, oldBox.length()/1.25 );
+        
+        
+    }
+
+
+    public boolean nests( Box outsideBox ) {
+
+        if (this.width()-outsideBox.width() >0 && this.height()-outsideBox.height() >0 && this.length()-outsideBox.length() >0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+        
+    }
+    
+    
+    
 }
-}
+
