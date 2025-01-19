@@ -43,7 +43,7 @@ class Box {
         return 2 * faceArea() + 2 * topArea() + 2 * sideArea() ;      
     }
 
-    private double faceArea(){
+    public double faceArea(){
         return length * height;
     }
 
@@ -51,7 +51,7 @@ class Box {
         return length * width;
     }
 
-    private double sideArea(){
+    public double sideArea(){
         return width * height;
     }
     

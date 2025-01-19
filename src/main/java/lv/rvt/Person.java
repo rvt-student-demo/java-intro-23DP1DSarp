@@ -6,25 +6,50 @@ import java.util.Scanner;
 public class Person {
 
     private String name;
-    private SimpleDate birthday;
-    private int weight = 0;
-    private int length = 0;
+    private String adress;
+    private int salary;
     
-  
     
 
-    public Person(String name, SimpleDate date) {
+    public Person(String name, String adress){
         this.name = name;
-        this.birthday = date;
+        this.adress = adress;
     }
 
-    public Person(String name, int day, int month, int year) {
+    public Person(String name, String adress, int salary){
         this.name = name;
-        this.birthday = new SimpleDate(day, month, year);
+        this.adress = adress;
+        this.salary = salary;
+    }
+    
+
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public String getAdress(){
+        return adress;
+    }
+
+    public void setAdress(String adress){
+        this.adress = adress;
+    }
+
+    public int getSalary(){
+        return salary;
+    }
+
+    public void setSalary(int salary){
+        this.salary = salary;
     }
 
     public String toString() {
-        return this.name + ", born on " + this.birthday;
+        return this.name + "\n  " + this.adress;
     }
     
 

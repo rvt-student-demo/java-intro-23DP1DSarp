@@ -1,22 +1,30 @@
 package lv.rvt;
 
-public class Student {
+public class Student extends Person{
 
     private int credits;
 
-    public Student() {
-        this.credits = 0;
+
+   public Student(String name, String adress){
+    super(name, adress);
+   }
+
+    public int credits() {
+        return this.credits;
     }
 
-    public void play() {
-        this.credits = this.credits - 8;
+    public void study(){
+        this.credits = this.credits + 1;
     }
 
-    public static void main(String[] args) {
-        Student matt = new Student();
-        matt.play();
-    }
+    @Override
+    public String toString() {
+        return super.toString() + "\n  Study credits " + this.credits;
+}
 
+    
+    
+    
 
 }
 

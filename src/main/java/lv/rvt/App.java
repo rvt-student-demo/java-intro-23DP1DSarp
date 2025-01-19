@@ -8,24 +8,25 @@ import java.util.*;
 
 public class App 
 {
-   // Comma separeted values
-
-   // Izlasīt persons.csv izmantojot BufferedReader objektu
+   
     
         
            
         
             public static void main(String[] args) throws Exception{
                 
-                Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
-                Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
-                Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
+                ArrayList<Person> persons = new ArrayList<Person>();
+                persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+                persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
 
-                System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));  // false
-                System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));   // true
+                printPersons(persons);
 
-            
+        }
 
+        public static void printPersons(ArrayList<Person> persons){
+            for(Person countPerson : persons) {
+                System.out.println(countPerson);
+            }
         }
     
     

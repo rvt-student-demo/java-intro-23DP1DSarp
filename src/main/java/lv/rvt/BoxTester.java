@@ -20,7 +20,7 @@ public class BoxTester {
      System.out.println( "Area: "  + box3.area() + " volume: " + box3. volume() );
      System.out.println( "topArea: "  + box3.topArea() );
 
-     System.out.println(box.nests(box3));
+     System.out.println(box.nests(box));
      
 
      
