@@ -53,7 +53,7 @@ public class ChangeHistory {
             sum += this.records.get(i);
         }
 
-        return sum/count;
+        return Math.round(sum/count * 100.0) / 100.0;
 
     }
 
