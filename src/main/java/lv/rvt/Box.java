@@ -1,87 +1,58 @@
 package lv.rvt;
 
-class Box {
+import java.util.ArrayList;
 
-    private double width;
-    private double height;
-    private double length;
+class Box implements Packable {
+
+    private double weight;
+    
+    
+    ArrayList<Packable> box = new ArrayList<>();
+
+
     
 
-    public Box( double width, double height, double length ){
-        this.width = width;
-        this.height = height;
-        this.length = length;
+    public Box(double weight) {
+        this.weight = weight;
+        this.box = new ArrayList<>();
     }
 
-    public Box( Box oldBox ){
-        this.width = oldBox.width();
-        this.height = oldBox.height();
-        this.length = oldBox.length();
+    public void add(Packable item) {
+        if (this.weight() + item.weight() <= this.weight ) {
+            box.add(item);
+        }
     }
 
    
 
 
-    public double width(){
-        return width;
-    }
-
-
-    public double height(){
-        return height;
-    }
-
-    public double length(){
-        return length;
-    }
-
-    public double volume(){
-        return length * width * height;
-    }
-
-    public double area(){
-        return 2 * faceArea() + 2 * topArea() + 2 * sideArea() ;      
-    }
-
-    public double faceArea(){
-        return length * height;
-    }
-
-    public double topArea(){
-        return length * width;
-    }
-
-    public double sideArea(){
-        return width * height;
-    }
-    
-    public Box biggerBox( Box oldBox ){
-
-        return new Box( 1.25*oldBox.width(),  1.25*oldBox.height(), 1.25*oldBox.length() );
-        
-        
-    }
-    
-    public Box smallerBox( Box oldBox ){
-
-        return new Box( oldBox.width()/1.25,  oldBox.height()/1.25, oldBox.length()/1.25 );
-        
-        
-    }
-
-
-    public boolean nests( Box outsideBox ) {
-
-        if (this.width()-outsideBox.width() >0 && this.height()-outsideBox.height() >0 && this.length()-outsideBox.length() >0) {
-            return true;
+    public double weight() {
+        double weight = 0;
+        for (Packable packable : box) {
+            weight += packable.weight();
         }
-        else {
-            return false;
-        }
-        
+        return weight;
     }
     
+   
     
+    public void printItems() {
+        for (Packable item : box) {
+            System.out.println(item);
+        }
+    }
+
+    
+
+
+    @Override
+    public String toString() {
+        return "Box: " + box.size() + " items, total weight " + weight() + " kg";
+    }
     
 }
+
+
+
+
 
