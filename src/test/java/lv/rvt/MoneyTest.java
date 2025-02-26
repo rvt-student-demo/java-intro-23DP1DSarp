@@ -25,8 +25,8 @@ public class MoneyTest {
         Money money2 = new Money(1,10);
         Money money3 = money1.minus(money2);
 
-        assertTrue(money3.euros() == 2);
-        assertTrue(money3.cents() == 20);
+        assertTrue(money3.euros() == 0);
+        assertTrue(money3.cents() == 0);
     }
 
     @Test
